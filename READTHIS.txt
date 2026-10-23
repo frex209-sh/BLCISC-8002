@@ -1,5 +1,5 @@
 BLCISC-8002
-Build Logic! CISC Processor. Model - 8002 (8-bit, second)
+Roblox "Build Logic!" CISC Processor. Model - 8002 (8-bit, second)
 ------
 The instructions are in range from 1 byte to 3
 3 Byte instruction: OPCODE / HIGH_BYTE / LOW_BYTE
