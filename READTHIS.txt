@@ -6,6 +6,10 @@ The instructions are in range from 1 byte to 3
 2 Byte instruction: OPCODE / CONSTANT 
 1 Byte instruction: OPCODE
 ------
+There are absolute and relative instructions
+For example: LDRR takes only 2 bytes, and LDR - 3. JR takes 2 bytes, JMP - 3
+Relative instructions works based on current PC_ADDRESS + OFFSET(byte)
+------
 Examples:
 LD A, 2: 1000 00 00 / 0000 0010
 MOV A, B: 1011 00 01
