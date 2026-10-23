@@ -1,0 +1,67 @@
+BLCISC-8002
+Build Logic! CISC Processor. Model - 8002 (8-bit, second)
+------
+The instructions are in range from 1 byte to 3
+3 Byte instruction: OPCODE / HIGH_BYTE / LOW_BYTE
+2 Byte instruction: OPCODE / CONSTANT 
+1 Byte instruction: OPCODE
+------
+Examples:
+LD A, 2: 1000 00 00 / 0000 0010
+MOV A, B: 1011 00 01
+STR A, $1000: 1010 00 00 / 1000 0000 / 0000 0000
+------
+00 00 0000 - HLT
+00 01 [rB] [rA] - ADD
+00 10 [rB] [rA] - SUB
+00 11 [rB] [rA] - ADC
+01 00 [rB] [rA] - SBB
+01 01 [rB] [rA] - AND
+01 10 [rB] [rA] - OR
+01 11 [rB] [rA] - XOR
+======
+10 00 [rD] 00 - LD
+10 00 [rD] 01 - IN
+10 01 [rD] 00 - LDR
+10 01 [rD] 01 - OUT
+10 01 [rD] 10 - LDRR 
+10 10 [rB] 00 - STR
+10 10 [rB] 01 - STRR
+10 11 [rD] [src] - MOV
+=======
+11 00 [rD] 00 - PHR
+11 00 [rD] 01 - PLR
+11 00 [rB] 10 - NOT
+11 00 [rB] 11 - 
+11 0100 01 - STC
+11 0100 10 - STZ
+11 0100 11 - CLC
+11 0101 00 - CLZ
+11 0101 01 - JR
+11 0101 10 - JRC
+11 0101 11 - JRNC
+11 0110 00 - JRZ
+11 0110 01 - JRNZ
+11 0110 10 - LSP
+11 0110 11 - STI
+11 0111 00 - CLI
+11 0111 01 - 
+11 0111 10 -
+11 0111 11 - 
+11 1000 00 - JMP
+11 1000 01 - BEQ
+11 1000 10 - BNE
+11 1000 11 - BCL
+11 1001 00 - BCG
+11 1001 01 - BCC
+11 1001 10 - BNC
+11 1001 11 - BCZ
+11 1010 00 - BNZ
+11 1010 01 - BCS
+11 1010 10 - BNS
+11 1010 11 - CALL
+11 1011 00 - RET
+11 1011 01 - NOP
+11 1011 10 - 
+11 1011 11 - RTI
+11 11 [rB] [rA] - CMP
